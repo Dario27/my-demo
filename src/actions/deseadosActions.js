@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export const agregarProductoDeseado = (producto) => async (dispatch) => {
     try {
         let productosDeseados = await AsyncStorage.getItem('productosDeseados');
+        console.log("productselected =>", productosDeseados)
         productosDeseados = productosDeseados ? JSON.parse(productosDeseados) : [];
         productosDeseados.push(producto);
         await AsyncStorage.setItem('productosDeseados', JSON.stringify(productosDeseados));
