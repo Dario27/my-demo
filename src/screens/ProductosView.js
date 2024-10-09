@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import {endpointApiUrl} from '../reducers/Api';
 import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
 
 
 const ProductosView = () => {
@@ -76,6 +77,8 @@ const ProductosView = () => {
         <div>
             <Box component="section" >
                 <Button   title="Buscar productos"/>
+                <Typography
+                    variant='h3'>Listado de Productos</Typography>
                     <Paper sx={{ height: "auto", width: '100%' }}>
                     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                         <thead>
@@ -98,7 +101,7 @@ const ProductosView = () => {
                                     <td>
                                             <Button 
                                                 style={{
-                                                  backgroundColor:"blue",
+                                                    backgroundColor:"blue",
                                                     color:"white"
                                                 }}
                                                  onClick={() => toggleFavorito(item.productoId)} 
